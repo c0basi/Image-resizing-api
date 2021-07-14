@@ -10,6 +10,6 @@ app.get('/', router)
 
 // start the express server
 app.listen(port, () =>{
-    console.log(`Listening on port ${port}`);
+    console.log(`I am listening on port ${port}`);
     
 })
