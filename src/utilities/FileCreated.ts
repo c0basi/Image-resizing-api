@@ -1,6 +1,7 @@
 import { access } from 'fs/promises';
 import { constants } from 'fs';
 
+// checks if the file exists at the path specified
 const fileExist = async (Path: string): Promise<boolean> => {
     try {
       await access(Path, constants.R_OK | constants.W_OK);
