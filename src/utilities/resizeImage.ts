@@ -1,12 +1,13 @@
 import sharp from 'sharp';
+import config from '../config';
 
 const resizeImage = async (
     filename: string,
     width: number, 
     height: number
 ): Promise<void> =>{
-    const imagePath = `../../assets/static/images/${filename}.jpg`
-    const outdir = `./assets/changedImages/${filename}${width}X${height}`
+    const imagePath = `${config.assets}/static/images/${filename}.jpg`
+    const outdir = `${config.assets}/changedImages/${filename}${width}-${height}`
     try{
         await sharp(imagePath)
         .rotate()
