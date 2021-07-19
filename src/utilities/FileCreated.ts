@@ -1,6 +1,5 @@
 //import { access } from 'fs/promises';
-import {promises as fsPromises} from 'fs';
-import { constants } from 'fs';
+import { constants, promises as fsPromises } from 'fs';
 
 // checks if the file exists at the path
 const fileExist = async (Path: string): Promise<boolean> => {
