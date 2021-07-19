@@ -15,11 +15,17 @@ images.get('/', async(req: express.Request, res: express.Response): Promise<void
     try{
         const width = parseInt((req.query.width as string));
         const height = parseInt((req.query.height as string));;
-         const outdirExists = await fileExist(outdir);
+        const outdirExists = await fileExist(outdir);
         const imageExists = await fileExist(pathToImage);
 
         if (!imageExists){
-            res.send('The image entered does not exist, please enter a valid image')
+            res.send('The image entered does not exist, please enter a filename')
+        }
+        else if(width <= 0 || height <= 0 ){
+            res.send('Please enter a positive number for width and height')
+        }
+        else if(Number.isNaN(width) || Number.isNaN(height)){
+            res.send('Plese enter a valid number. For example 200')
         }
 
         else if(!outdirExists){
