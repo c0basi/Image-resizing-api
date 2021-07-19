@@ -7,7 +7,7 @@ const resizeImage = async (
     height: number
 ): Promise<void> =>{
     const imagePath = `${config.assets}/static/images/${filename}.jpg`
-    const outdir = `${config.assets}/changedImages/${filename}${width}-${height}`
+    const outdir = `${config.assets}/changedImages/${filename}${width}-${height}.jpg`
     try{
         await sharp(imagePath)
         .rotate()

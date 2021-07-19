@@ -9,14 +9,13 @@ const images = express.Router();
 
 images.get('/', async(req: express.Request, res: express.Response): Promise<void> =>{
     const file = req.query.filename as string;
-    const pathToImage = `${config.assets}/statc/images/${req.query.filename}`;
-    const outdir = `${config.assets}/changesImages/${req.query.filename}${req.query.width}-${req.query.height}` as string;
+    const pathToImage = `${config.assets}/static/images/${req.query.filename}.jpg`;
+    const outdir = `${config.assets}/changedImages/${req.query.filename}${req.query.width}-${req.query.height}.jpg` as string ;
 
     try{
-        const width = (req.query.width as unknown) as number;
-        const height = (req.query.height as unknown) as number;
-
-        const outdirExists = await fileExist(outdir);
+        const width = parseInt((req.query.width as string));
+        const height = parseInt((req.query.height as string));;
+         const outdirExists = await fileExist(outdir);
         const imageExists = await fileExist(pathToImage);
 
         if (!imageExists){
@@ -34,9 +33,12 @@ images.get('/', async(req: express.Request, res: express.Response): Promise<void
     catch(err){
         console.log(`Error getting image. Error ${err}`);
         
-
+        
     }
     
 })
 
+
+
+export default images;
 
