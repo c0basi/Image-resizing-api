@@ -19,7 +19,7 @@ images.get('/', async(req: express.Request, res: express.Response): Promise<void
         const imageExists = await fileExist(pathToImage);
 
         if (!imageExists){
-            res.send('The image entered does not exist, please enter a filename')
+            res.send('The image entered does not exist, please enter a correct filename')
         }
         else if(width <= 0 || height <= 0 ){
             res.send('Please enter a positive number for width and height')
