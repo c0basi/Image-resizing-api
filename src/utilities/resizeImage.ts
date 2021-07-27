@@ -16,7 +16,7 @@ const resizeImage = async (
 
     }
     catch(err){
-        throw new Error(`Could not process the image. Error: ${err}`)
+        throw new Error(`Could not process the image. ${err}`)
     }
 }
 
