@@ -1,9 +1,6 @@
 import supertest from "supertest";
 import fileExist from "../../utilities/FileCreated";
 
-
-
-
 describe('Test for correct image paths', ()=>{
     const imageExists = './assets/static/images/icelandwaterfall.jpg'; 
     const imageNotExists = './assets/static/images/wate.jpg';
