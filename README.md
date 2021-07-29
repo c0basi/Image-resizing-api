@@ -1,10 +1,16 @@
-# Image-resizing-api
+## Image-resizing-api
 
 This is a project done to resize images in the browser
 
-How to use
-the query parameters are filename, width and height.
+# To install and start the Image Process API server, run the following commands in this directory:
 
+npm install
+npm run start
+you can test the ImageProcessAPI server with npm run test
+
+# HOW TO USE
+the query parameters are filename, width and height.
+# API endpoints
 1 Enter a valid file name :
   the valid filenames are fjord, palmtunnel, santamonica, icelandwaterfall and encenadaport
 
