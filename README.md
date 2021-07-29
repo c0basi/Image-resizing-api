@@ -2,7 +2,7 @@
 
 This is a project done to resize images in the browser. This project is  for Backend Development with Node.js in Udacity's Full-Stack JavaScript Development Nanodegree.
 
-# To install and start the Image Process API server, run the following commands in this directory:
+# To install and start the Image Process API server, run the following commands :
 
  npm install
 
