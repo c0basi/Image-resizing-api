@@ -1,4 +1,3 @@
-//import { access } from 'fs/promises';
 import { constants, promises as fsPromises } from 'fs';
 
 // checks if the file exists at the path

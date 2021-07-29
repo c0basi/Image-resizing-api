@@ -1,4 +1,4 @@
-// this will be responsible for checking if the image exists and then sending the modifies stuff
+// this will be responsible for checking if the image exists and then sending the modified image
 
 import express from 'express';
 import fileExist from '../../utilities/FileCreated';
@@ -30,10 +30,10 @@ images.get('/', async(req: express.Request, res: express.Response): Promise<void
 
         else if(!outdirExists){
             await resizeImage(file,width,height);
-            res.sendFile(outdir);
+            res.status(200).sendFile(outdir);
         }
         else{
-            res.sendFile(outdir);
+            res.status(200).sendFile(outdir);
         }
     }
     catch(err){
