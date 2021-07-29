@@ -4,9 +4,11 @@ This is a project done to resize images in the browser
 
 # To install and start the Image Process API server, run the following commands in this directory:
 
-npm install
-npm run start
-you can test the ImageProcessAPI server with npm run test
+ npm install
+
+ npm run start
+
+you can test the Image-resizing-api server with npm run test
 
 # HOW TO USE
 the query parameters are filename, width and height.
